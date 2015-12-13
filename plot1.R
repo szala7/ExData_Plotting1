@@ -9,6 +9,6 @@ data$DateTime = as.POSIXlt(data$DateTime,format="%d/%m/%Y %H:%M:%S")
 
 subdata <- subset(data,DateTime$year==107 & DateTime$mon==1 & (DateTime$mday==1 | DateTime$mday==2))
 
-png("plot1.png")
+png("plot1.png",width = 480, height = 480)
 hist(subdata$Global_active_power,main="Global Active Power",ylab="Frequency",xlab="Global Active Power (kilowats)",col="red",ylim=c(0,1200))
 dev.off()
